@@ -27,9 +27,7 @@ class ProductController
             $amount = $_REQUEST['amount'];
             $to_date = $_REQUEST['to_date'];
             $description = $_REQUEST['description'];
-            if (!empty($names) && !empty($types) && !empty($price) && !empty($amount) && !empty($to_date) && !empty($description)){
-                $this->productModel->addProduct($names,$types,$price,$amount,$to_date,$description);
-            }
+            $this->productModel->addProduct($names,$types,$price,$amount,$to_date,$description);
         }
     }
 
@@ -52,9 +50,8 @@ class ProductController
             $amount = $_REQUEST['amount'];
             $to_date = $_REQUEST['to_date'];
             $description = $_REQUEST['description'];
-            if (!empty($product_id) &&!empty($names) && !empty($types) && !empty($price) && !empty($amount) && !empty($to_date) && !empty($description)){
-                $this->productModel->editProduct($product_id,$names,$types,$price,$amount,$to_date,$description);
-            }
+            $this->productModel->editProduct($product_id,$names,$types,$price,$amount,$to_date,$description);
+
         }
     }
 }
